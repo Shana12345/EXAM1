@@ -28,19 +28,16 @@ def three(arg1):
 
 
 def four(arg1):
-    b = []
-    x = []
-    arg1 = arg1.replace(" ", "0")
-    for i in arg1:
-        for c in i:
-            x.append(c)
-            x = list(map(int, x))
-            i = 0
-            while i <= len(x)-2:
-                a = x[i] + x[i+1] + x[i+2]
-                b.append(a)
-                i = i + 2
-	return max(b)
+	b = []
+	x = []
+	lk = []
+	arg1 = arg1.split()
+	for i in arg1:
+		count = 0
+		for c in i:
+			count = count + int(c)
+			lk.append(count)
+	return max(lk)
 
 
 def five(input):
