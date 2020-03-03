@@ -57,14 +57,19 @@ def five(input):
 
 
 def six(input):
-	s = input
-	for i in range(len(input)-2):
-		if s[i] == 'c' and s[i+1] == 'e' and s[i+2] == 'i':
-			return True
-		if s[i] != 'c' and s[i+1] == 'i' and s[i+2] == 'e':
-			return True
-		else:
-			return False
+	import re
+	a = len(re.findall("cei", input))
+	b = len(re.findall("ie", input))
+	c = len(re.findall("cie", input))
+	if c > 0:
+		return False
+	if a > 0:
+		return True
+	if b > 0:
+		return True
+	else:
+		return False
+
 
 
 def seven(input):
