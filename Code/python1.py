@@ -11,7 +11,7 @@ def two(input):
     input = input.lower()
     l = input.split("bert")
     if len(l) % 2 == 0:
-        return '"'+'"'
+        return ""
     else:
         return "".join(l[(int(len(l)/2))])
 
@@ -36,7 +36,7 @@ def four(arg1):
             x.append(c)
             x = list(map(int, x))
             i = 0
-            while i < len(x)-2:
+            while i <= len(x)-2:
                 a = x[i] + x[i+1] + x[i+2]
                 b.append(a)
                 i = i + 2
